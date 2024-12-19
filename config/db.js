@@ -9,7 +9,8 @@ const sequelize = new Sequelize(
   process.env.DB_PASS ,     // Mật khẩu
   {
     host: process.env.DB_HOST , // Máy chủ
-    dialect: 'mysql',                         // Loại cơ sở dữ liệu
+    dialect: 'mysql',
+    dialectModule: require('mysql2')                         // Loại cơ sở dữ liệu
   }
 );
 
